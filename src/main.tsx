@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./main.css";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { HashRouter, Route, Routes } from "react-router";
 
 import GalleryLayout from "./layouts/GalleryLayout.tsx";
 import PageLayout from "./layouts/PageLayout.tsx";
@@ -18,7 +18,7 @@ import Artwork from "./routes/artwork.$slug.tsx";
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<PageLayout />}>
           {/* Information Pages */}
@@ -36,6 +36,6 @@ createRoot(document.getElementById("root")!).render(
           <Route path="artwork/:slug" element={<Artwork />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 );
