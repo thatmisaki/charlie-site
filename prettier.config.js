@@ -1,6 +1,6 @@
 /** @type {import('prettier').Config & import('prettier-plugin-tailwindcss').PluginOptions} */
 const config = {
-  tailwindStylesheet: "./src/index.css",
+  tailwindStylesheet: "./index.css",
   plugins: [
     "prettier-plugin-classnames",
     "prettier-plugin-merge",
