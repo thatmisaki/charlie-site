@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overscroll-none">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -8,9 +8,9 @@
 
     <title>Charlie Riback</title>
   </head>
-  <body>
+  <body class="flex overflow-y-auto">
     <!-- Page Container -->
-    <div class="min-h-screen bg-slate-900">
+    <div class="flex min-h-screen flex-1 bg-slate-900">
       <!-- Page Margin Container -->
       <div
         class="container m-auto flex h-full flex-col gap-8 p-8 2xl:max-w-7xl"
@@ -40,73 +40,18 @@
                 >Fan Art</span
               ></a
             >
+
+            <a href="/charlie-site/concept-art" class="group"
+              ><span
+                class="text-lg text-slate-300 underline-offset-6 transition-colors group-hover:text-slate-200"
+                >Concept Art</span
+              ></a
+            >
           </nav>
         </header>
 
         <!-- Content Grid Container -->
-        <main class="grid flex-1 grid-cols-3 gap-4">
-          <!-- Content Grid Column List -->
-          <div class="flex flex-col items-center justify-start gap-4">
-            <!-- Content Grid Column Item List -->
-            <img src="./src/assets/Standoff.jpg" />
-
-            <img src="./src/assets/Born Again.png" />
-
-            <img src="./src/assets/Cat Nap.jpg" />
-
-            <img src="./src/assets/Scarlet 2023.jpg" />
-
-            <img src="./src/assets/Overheated.jpg" />
-
-            <img src="./src/assets/Starwalker.png" />
-
-            <img src="./src/assets/Take Aim.jpg" />
-
-            <img src="./src/assets/Chasryn Portrait.jpg" />
-          </div>
-
-          <div class="flex flex-col items-center justify-start gap-4">
-            <!-- Content Grid Column Item List -->
-            <img src="./src/assets/Dead City.jpg" />
-
-            <img src="./src/assets/Ember Fox.png" />
-
-            <img src="./src/assets/Ash and Fire.jpg" />
-
-            <img src="./src/assets/Opal Deer.jpg" />
-
-            <img src="./src/assets/Geothermal.jpg" />
-
-            <img src="./src/assets/Glass Ball.png" />
-
-            <img src="./src/assets/Mollow and Mountain.jpg" />
-
-            <img src="./src/assets/Eleven-Year Countdown.jpg" />
-
-            <img src="./src/assets/The Nomad.jpg" />
-
-            <img src="./src/assets/Beach Weather.jpg" />
-          </div>
-
-          <div class="flex flex-col items-center justify-start gap-4">
-            <!-- Content Grid Column Item List -->
-            <img src="./src/assets/Midnight Princess.jpg" />
-
-            <img src="./src/assets/Bone Fields.jpg" />
-
-            <img src="./src/assets/This Way.jpg" />
-
-            <img src="./src/assets/Spotlight.jpg" />
-
-            <img src="./src/assets/Submerged.png" />
-
-            <img src="./src/assets/Crystalline.jpg" />
-
-            <img src="./src/assets/Breath of Fire.jpg" />
-
-            <img src="./src/assets/Cleaning Up.jpg" />
-          </div>
-        </main>
+        <main id="gallery-content" class="grid flex-1 grid-cols-3 gap-4"></main>
 
         <!-- Footer Container -->
         <footer class="flex flex-row items-center justify-between">
@@ -190,5 +135,12 @@
         </footer>
       </div>
     </div>
+
+    <!-- Image Load + Sort Script -->
+    <script type="module">
+      import { load } from "./src/image-load.ts";
+
+      load("gallery-content", "gallery");
+    </script>
   </body>
 </html>
