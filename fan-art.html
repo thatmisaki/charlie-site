@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overscroll-none">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -8,7 +8,7 @@
 
     <title>Charlie Riback</title>
   </head>
-  <body>
+  <body class="overflow-y-auto">
     <!-- Page Container -->
     <div class="min-h-screen bg-slate-900">
       <!-- Page Margin Container -->
@@ -40,53 +40,18 @@
                 >Fan Art</span
               ></a
             >
+
+            <a href="/charlie-site/concept-art" class="group"
+              ><span
+                class="text-lg text-slate-300 underline-offset-6 transition-colors group-hover:text-slate-200"
+                >Concept Art</span
+              ></a
+            >
           </nav>
         </header>
 
         <!-- Content Grid Container -->
-        <main class="grid flex-1 grid-cols-3 gap-4">
-          <!-- Content Grid Column List -->
-          <div class="flex flex-col items-center justify-start gap-4">
-            <!-- Content Grid Column Item List -->
-            <img src="./src/assets/The Light Dragon.jpg" />
-
-            <img src="./src/assets/Serperior.png" />
-
-            <img src="./src/assets/2B Portrait.png" />
-
-            <img src="./src/assets/Guinevere and Guinevere.png" />
-
-            <img src="./src/assets/Ahsoka Portrait.jpg" />
-
-            <img src="./src/assets/Comfort Zelda.jpg" />
-          </div>
-
-          <div class="flex flex-col items-center justify-start gap-4">
-            <!-- Content Grid Column Item List -->
-            <img src="./src/assets/Makise Kurisu.png" />
-
-            <img src="./src/assets/Zeldragon.png" />
-
-            <img src="./src/assets/Hisuian Zoroark.png" />
-
-            <img src="./src/assets/Morgan.png" />
-
-            <img src="./src/assets/Blood Moon.jpg" />
-          </div>
-
-          <div class="flex flex-col items-center justify-start gap-4">
-            <!-- Content Grid Column Item List -->
-            <img src="./src/assets/Eons and Eons.jpg" />
-
-            <img src="./src/assets/Duna Dress.png" />
-
-            <img src="./src/assets/Gardevoir Delta.png" />
-
-            <img src="./src/assets/Death and I.jpg" />
-
-            <img src="./src/assets/Loft.jpg" />
-          </div>
-        </main>
+        <main id="gallery-content" class="grid flex-1 grid-cols-3 gap-4"></main>
 
         <!-- Footer Container -->
         <footer class="flex flex-row items-center justify-between">
@@ -170,5 +135,12 @@
         </footer>
       </div>
     </div>
+
+    <!-- Image Load + Sort Script -->
+    <script type="module">
+      import { load } from "./src/image-load.ts";
+
+      load("gallery-content", "fan-art");
+    </script>
   </body>
 </html>
