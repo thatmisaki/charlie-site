@@ -9,12 +9,6 @@ const images = import.meta.glob<string>("./assets/**/*.{png,jpg,jpeg}", {
 /** The hardcoded non-zero number of columns. */
 export const COLS = 3;
 
-/** The hardcoded gap between columns, as per Tailwind. */
-export const COL_GAP = 4;
-
-/** The hardcoded gap between rows, as per Tailwind. */
-export const ROW_GAP = 4;
-
 /** Defines the structure of the metadata listing. */
 export interface Metadata {
   // The sorted page index.
@@ -45,8 +39,6 @@ export interface Metadata {
  * no changes will be written.
  */
 export function load(id: string, page: string) {
-  console.log(images);
-
   // Retrieve and validate the root element from the DOM before progressing.
   const root = document.getElementById(id);
   if (root === null) {
@@ -88,8 +80,6 @@ export function load(id: string, page: string) {
 
     // Create and update the image element with all necessary attributes.
     const imageElement = document.createElement("img");
-
-    console.log(imageMeta.path);
 
     imageElement.src = images[`./${imageMeta.path}`];
     imageElement.alt = title;
