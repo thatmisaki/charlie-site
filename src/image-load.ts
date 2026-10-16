@@ -1,5 +1,11 @@
 import metadata from "./metadata.json";
 
+// Pre-load images for path resolution through Vite.
+const images = import.meta.glob<string>("./assets/**/*.{png,jpg,jpeg}", {
+  eager: true,
+  import: "default",
+});
+
 /** The hardcoded non-zero number of columns. */
 export const COLS = 3;
 
@@ -39,6 +45,8 @@ export interface Metadata {
  * no changes will be written.
  */
 export function load(id: string, page: string) {
+  console.log(images);
+
   // Retrieve and validate the root element from the DOM before progressing.
   const root = document.getElementById(id);
   if (root === null) {
@@ -66,7 +74,7 @@ export function load(id: string, page: string) {
   }));
 
   // Add and sort images by fit from the image index.
-  for (const [_index, title] of pageIndex.entries()) {
+  for (const title of pageIndex.values()) {
     // Retrieve and validate each image from the page index.
     const imageMeta = (metadata as Metadata).images[title];
     if (imageMeta === undefined) {
@@ -81,7 +89,10 @@ export function load(id: string, page: string) {
     // Create and update the image element with all necessary attributes.
     const imageElement = document.createElement("img");
 
-    imageElement.src = `./src/${imageMeta.path}`;
+    console.log(imageMeta.path);
+
+    imageElement.src = images[`./${imageMeta.path}`];
+    imageElement.alt = title;
     imageElement.width = imageMeta.width;
     imageElement.height = imageMeta.height;
 
