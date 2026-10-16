@@ -1,16 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overscroll-none">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/charlie-site/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Charlie Riback</title>
-    <link rel="stylesheet" crossorigin href="/charlie-site/assets/charlie-site-M2a0rXSS.css">
+    <script type="module" crossorigin src="/charlie-site/assets/main-CjLeR5MQ.js"></script>
+    <link rel="modulepreload" crossorigin href="/charlie-site/assets/image-load-cerlitzG.js">
+    <link rel="stylesheet" crossorigin href="/charlie-site/assets/image-load-DnegCEK3.css">
   </head>
-  <body>
+  <body class="flex overflow-y-auto">
     <!-- Page Container -->
-    <div class="min-h-screen bg-slate-900">
+    <div class="flex min-h-screen flex-1 bg-slate-900">
       <!-- Page Margin Container -->
       <div
         class="container m-auto flex h-full flex-col gap-8 p-8 2xl:max-w-7xl"
@@ -18,7 +20,7 @@
         <!-- Header Container -->
         <header class="flex flex-row items-center justify-between">
           <!-- Header Title -->
-          <a href="/"
+          <a href="/charlie-site/"
             ><span class="text-3xl font-bold text-slate-200"
               >Charlie Riback</span
             ></a
@@ -40,79 +42,18 @@
                 >Fan Art</span
               ></a
             >
+
+            <a href="/charlie-site/concept-art" class="group"
+              ><span
+                class="text-lg text-slate-300 underline-offset-6 transition-colors group-hover:text-slate-200"
+                >Concept Art</span
+              ></a
+            >
           </nav>
         </header>
 
         <!-- Content Grid Container -->
-        <main class="grid flex-1 grid-cols-3 gap-4">
-          <!-- Content Grid Column List -->
-          <div class="flex flex-col items-center justify-start gap-4">
-            <!-- Content Grid Column Item List -->
-            <img src="/charlie-site/assets/Standoff-B1rtSmm3.jpg" />
-
-            <img src="/charlie-site/assets/Born%20Again-Ci3sLDbr.png" />
-
-            <img src="/charlie-site/assets/Cat%20Nap-BcuK6QXn.jpg" />
-
-            <img src="/charlie-site/assets/Scarlet%202023-CIv-VJds.jpg" />
-
-            <img src="/charlie-site/assets/Overheated-CDbRqTjq.jpg" />
-
-            <img src="/charlie-site/assets/Glimpse%20of%20a%20Starwalker-Bocns_cT.jpg" />
-
-            <img src="/charlie-site/assets/Take%20Aim-BeZc2lwW.jpg" />
-
-            <img src="/charlie-site/assets/Chasryn-BQb2aOiV.jpg" />
-
-            <img src="/charlie-site/assets/Beach%20Weather-TfnSij-J.jpg" />
-          </div>
-
-          <div class="flex flex-col items-center justify-start gap-4">
-            <!-- Content Grid Column Item List -->
-            <img src="/charlie-site/assets/Dead%20City-BCfmCYLm.jpg" />
-
-            <img src="/charlie-site/assets/Ember%20Fox-BNuYtPYH.png" />
-
-            <img src="/charlie-site/assets/Ash%20and%20Fire-CCv-g4ri.jpg" />
-
-            <img src="/charlie-site/assets/Opal%20Deer-Cwytdq-Z.jpg" />
-
-            <img src="/charlie-site/assets/Geothermal-Hnq69Wpg.jpg" />
-
-            <img src="/charlie-site/assets/Glass%20Ball-Kd1FzrEC.jpg" />
-
-            <img src="/charlie-site/assets/Lazuli-C_wNkP64.jpg" />
-
-            <img src="/charlie-site/assets/Mollow%20and%20Mountain-D-ptkKgi.jpg" />
-
-            <img src="/charlie-site/assets/Marigold-CLmdw6Bf.jpg" />
-
-            <img src="/charlie-site/assets/Feeding%20the%20Birds-CTIkb9tD.jpg" />
-          </div>
-
-          <div class="flex flex-col items-center justify-start gap-4">
-            <!-- Content Grid Column Item List -->
-            <img src="/charlie-site/assets/Midnight%20Princess-BhYy_9IA.jpg" />
-
-            <img src="/charlie-site/assets/Bone%20Fields%20Repaint-D3ydNAjn.jpg" />
-
-            <img src="/charlie-site/assets/This%20Way%20small-q_zyxBC2.jpg" />
-
-            <img src="/charlie-site/assets/Spotlight-C5bgzfXN.jpg" />
-
-            <img src="/charlie-site/assets/Submerged-B3jlNSZn.png" />
-
-            <img src="/charlie-site/assets/Crystalline-C3GcFAdI.jpg" />
-
-            <img src="/charlie-site/assets/Breath%20of%20Fire-CMZBwIIU.jpg" />
-
-            <img src="/charlie-site/assets/cleaning%20up%20revised-BmkfQ2hL.jpg" />
-
-            <img src="/charlie-site/assets/Eleven-Year%20Countdown%20RGB-Cr9733Lt.jpg" />
-
-            <img src="/charlie-site/assets/The%20Nomad-BfUIkkZ8.jpg" />
-          </div>
-        </main>
+        <main id="gallery-content" class="grid flex-1 grid-cols-3 gap-4"></main>
 
         <!-- Footer Container -->
         <footer class="flex flex-row items-center justify-between">
@@ -196,5 +137,7 @@
         </footer>
       </div>
     </div>
+
+    <!-- Image Load + Sort Script -->
   </body>
 </html>

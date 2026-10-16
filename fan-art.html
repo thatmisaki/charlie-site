@@ -1,14 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overscroll-none">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/charlie-site/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Charlie Riback</title>
-    <link rel="stylesheet" crossorigin href="/charlie-site/assets/charlie-site-M2a0rXSS.css">
+    <script type="module" crossorigin src="/charlie-site/assets/fan_art-Bt5_veLO.js"></script>
+    <link rel="modulepreload" crossorigin href="/charlie-site/assets/image-load-cerlitzG.js">
+    <link rel="stylesheet" crossorigin href="/charlie-site/assets/image-load-DnegCEK3.css">
   </head>
-  <body>
+  <body class="overflow-y-auto">
     <!-- Page Container -->
     <div class="min-h-screen bg-slate-900">
       <!-- Page Margin Container -->
@@ -18,7 +20,7 @@
         <!-- Header Container -->
         <header class="flex flex-row items-center justify-between">
           <!-- Header Title -->
-          <a href="/"
+          <a href="/charlie-site/"
             ><span class="text-3xl font-bold text-slate-200"
               >Charlie Riback</span
             ></a
@@ -40,59 +42,18 @@
                 >Fan Art</span
               ></a
             >
+
+            <a href="/charlie-site/concept-art" class="group"
+              ><span
+                class="text-lg text-slate-300 underline-offset-6 transition-colors group-hover:text-slate-200"
+                >Concept Art</span
+              ></a
+            >
           </nav>
         </header>
 
         <!-- Content Grid Container -->
-        <main class="grid flex-1 grid-cols-3 gap-4">
-          <!-- Content Grid Column List -->
-          <div class="flex flex-col items-center justify-start gap-4">
-            <!-- Content Grid Column Item List -->
-            <img src="/charlie-site/assets/The%20Light%20Dragon-D8zFq6et.jpg" />
-
-            <img src="/charlie-site/assets/Serperior-Lybj1e0y.png" />
-
-            <img src="/charlie-site/assets/2B%20Portrait-xf9n5S4j.png" />
-
-            <img src="/charlie-site/assets/Guinevere%20and%20Guinevere-B9CvOFen.png" />
-
-            <img src="/charlie-site/assets/Ahsoka%20Portrait-Dbha9Q0a.jpg" />
-
-            <img src="/charlie-site/assets/Futaba!-CYKZRMj8.jpg" />
-          </div>
-
-          <div class="flex flex-col items-center justify-start gap-4">
-            <!-- Content Grid Column Item List -->
-            <img src="/charlie-site/assets/Portrait%20of%20Makise%20Kurisu-DZeVEp6q.jpg" />
-
-            <img src="/charlie-site/assets/Zeldragon%2012x18-Cn5REgTF.jpg" />
-
-            <img src="/charlie-site/assets/Hisuian%20Zoroark%20Update-DZXzQ1dV.png" />
-
-            <img src="/charlie-site/assets/Morgan%20Edit-D4d7iI6s.png" />
-
-            <img src="/charlie-site/assets/Blood%20Moon-BsMKdNR9.jpg" />
-
-            <img src="/charlie-site/assets/Duna%20-DNbDFv0d.jpg" />
-          </div>
-
-          <div class="flex flex-col items-center justify-start gap-4">
-            <!-- Content Grid Column Item List -->
-            <img src="/charlie-site/assets/Eons%20and%20Eons-B2Ic3c_3.jpg" />
-
-            <img src="/charlie-site/assets/Duna%20Dress-0vw_BpQf.png" />
-
-            <img src="/charlie-site/assets/Gardevoir%20Delta-C6Apv5el.png" />
-
-            <img src="/charlie-site/assets/Death%20and%20I-CyMJu0t2.jpg" />
-
-            <img src="/charlie-site/assets/Loft-DA3MFFoT.jpg" />
-
-            <img src="/charlie-site/assets/comfort%20zelda%202-Dunl02h7.jpg" />
-
-            <img src="/charlie-site/assets/Walking%20Wake-qCYNA-Ck.jpg" />
-          </div>
-        </main>
+        <main id="gallery-content" class="grid flex-1 grid-cols-3 gap-4"></main>
 
         <!-- Footer Container -->
         <footer class="flex flex-row items-center justify-between">
@@ -176,5 +137,7 @@
         </footer>
       </div>
     </div>
+
+    <!-- Image Load + Sort Script -->
   </body>
 </html>
